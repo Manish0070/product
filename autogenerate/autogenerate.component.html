@@ -1,0 +1,84 @@
+<p>Auto Genetarated Team</p>
+
+<!-- 1st meathod -->
+<!-- <mat-tab-group dynamicHeight>
+         **ngFor="let role of roles" For dynamic tabs refer this link https://stackblitz.com/edit/angular-dynamic-tabs?file=app%2Fapp.component.ts 
+    <mat-tab label="Role 1">
+      <div class="small-box mat-elevation-z4">
+        <mat-card class="card">
+            <mat-card-header>
+              <div mat-card-avatar class="example-header-image"></div>
+              <mat-card-title>Suresh</mat-card-title>
+              <mat-card-subtitle>Java Devloper</mat-card-subtitle>
+            </mat-card-header>
+            <img mat-card-image src="" alt="Photo of Suresh">
+            <mat-card-content>
+              <p>
+                Description of suresh
+              </p>
+            </mat-card-content>
+            <mat-card-actions>
+                 have to change the accept and reject later 
+                 <button type="button"  color="success" mdbWavesEffect>Success</button>
+              <button mat-button>Reject</button>
+            </mat-card-actions>
+          </mat-card>
+      </div>
+
+    have to add dynamically code to be refered from Docs 
+    </mat-tab>
+    <mat-tab label="Role 2">
+      <div class="small-box mat-elevation-z4">
+       content
+      </div>
+    </mat-tab>
+    <mat-tab label="Role 3">
+        <div class="small-box mat-elevation-z4">
+         content
+        </div> 
+      </mat-tab>
+  </mat-tab-group>  -->
+
+<!-- <div>
+      <span class="example-input-label"> Selected tab index: </span>
+      <mat-form-field>
+        <input matInput type="number" [formControl]="selected">
+      </mat-form-field>
+    </div>
+
+     2nd meathod  -->
+
+<div>
+  <button mat-raised-button class="example-add-tab-button" (click)="addTab()">
+    Add new tab
+  </button>
+  <!-- <mat-checkbox #selectAfterAdding> Select tab after adding </mat-checkbox> -->
+</div>
+
+<mat-tab-group>
+  <mat-tab *ngFor="let tab of tabs; let index = index" [label]="tab">
+
+
+    <mat-card class="card">
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>Suresh</mat-card-title>
+        <mat-card-subtitle>Java Devloper</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <p>
+          Description of suresh
+        </p>
+      </mat-card-content>
+     <button type="button" color="Success" >Sucess</button>
+    </mat-card>
+
+
+
+
+    <button mat-raised-button class="example-delete-tab-button" [disabled]="tabs.length === 1"
+      (click)="removeTab(index)">
+      Delete Tab
+    </button>
+  </mat-tab>
+</mat-tab-group>
